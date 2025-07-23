@@ -2,13 +2,25 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { APITester } from "./APITester";
 import "@/public/styles/globals.css";
-import React from "react";
+import React, { useState } from "react";
 import Counter from './components/shared/counter';
 
 import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
 
 export function App() {
+  // State dipindahkan ke App.tsx
+  const [count, setCount] = useState<number>(0);
+
+  // Handler functions
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  const handleDecrement = () => {
+    setCount(count - 1);
+  };
+
   return (
     <div className="container mx-auto p-8 text-center relative z-10">
       <div className="flex justify-center items-center gap-8 mb-8">
@@ -36,8 +48,12 @@ export function App() {
         </CardContent>
       </Card>
 
-      {/* Tambahkan Counter Component */}
-      <Counter />
+      {/* Counter Component dengan props */}
+      <Counter 
+        count={count}
+        onIncrement={handleIncrement}
+        onDecrement={handleDecrement}
+      />
     </div>
   );
 }
