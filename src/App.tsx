@@ -9,16 +9,22 @@ import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
 
 export function App() {
-  // State dipindahkan ke App.tsx
+  // State untuk counter
   const [count, setCount] = useState<number>(0);
 
-  // Handler functions
-  const handleIncrement = () => {
+  // Fungsi increment
+  const increment = () => {
     setCount(count + 1);
   };
 
-  const handleDecrement = () => {
+  // Fungsi decrement
+  const decrement = () => {
     setCount(count - 1);
+  };
+
+  // Fungsi reset
+  const reset = () => {
+    setCount(0);
   };
 
   return (
@@ -48,12 +54,24 @@ export function App() {
         </CardContent>
       </Card>
 
-      {/* Counter Component dengan props */}
+      {/* Counter Component */}
       <Counter 
         count={count}
-        onIncrement={handleIncrement}
-        onDecrement={handleDecrement}
+        onIncrement={increment}
+        onDecrement={decrement}
       />
+
+      {/* Reset Button */}
+      <Card className="bg-card/50 backdrop-blur-sm border-muted mt-4">
+        <CardContent className="pt-6">
+          <button
+            onClick={reset}
+            className="px-6 py-3 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors font-semibold"
+          >
+            Reset Counter
+          </button>
+        </CardContent>
+      </Card>
     </div>
   );
 }
