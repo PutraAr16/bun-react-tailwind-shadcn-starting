@@ -1,11 +1,32 @@
+// src/App.tsx
 import { Card, CardContent } from "@/components/ui/card";
 import { APITester } from "./APITester";
 import "@/public/styles/globals.css";
+import React, { useState } from "react";
+import Counter from './components/shared/counter';
 
 import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
 
 export function App() {
+  // State untuk counter
+  const [count, setCount] = useState<number>(0);
+
+  // Fungsi increment
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  // Fungsi decrement
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  // Fungsi reset
+  const reset = () => {
+    setCount(0);
+  };
+
   return (
     <div className="container mx-auto p-8 text-center relative z-10">
       <div className="flex justify-center items-center gap-8 mb-8">
@@ -30,6 +51,25 @@ export function App() {
             save to test HMR
           </p>
           <APITester />
+        </CardContent>
+      </Card>
+
+      {/* Counter Component */}
+      <Counter 
+        count={count}
+        onIncrement={increment}
+        onDecrement={decrement}
+      />
+
+      {/* Reset Button */}
+      <Card className="bg-card/50 backdrop-blur-sm border-muted mt-4">
+        <CardContent className="pt-6">
+          <button
+            onClick={reset}
+            className="px-6 py-3 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors font-semibold"
+          >
+            Reset Counter
+          </button>
         </CardContent>
       </Card>
     </div>
