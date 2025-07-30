@@ -4,28 +4,19 @@ import { APITester } from "./APITester";
 import "@/public/styles/globals.css";
 import React, { useState } from "react";
 import Counter from './components/shared/counter';
+import { ProfileCard } from './components/shared';
+import { profileData } from './data';
 
 import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
 
 export function App() {
-  // State untuk counter
+  // State untuk counter (dari tugas sebelumnya)
   const [count, setCount] = useState<number>(0);
 
-  // Fungsi increment
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  // Fungsi decrement
-  const decrement = () => {
-    setCount(count - 1);
-  };
-
-  // Fungsi reset
-  const reset = () => {
-    setCount(0);
-  };
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+  const reset = () => setCount(0);
 
   return (
     <div className="container mx-auto p-8 text-center relative z-10">
@@ -42,7 +33,7 @@ export function App() {
         />
       </div>
 
-      <Card className="bg-card/50 backdrop-blur-sm border-muted">
+      <Card className="bg-card/50 backdrop-blur-sm border-muted mb-6">
         <CardContent className="pt-6">
           <h1 className="text-5xl font-bold my-4 leading-tight">Bun + React</h1>
           <p>
@@ -54,14 +45,24 @@ export function App() {
         </CardContent>
       </Card>
 
-      {/* Counter Component */}
+      {/* ProfileCard Component */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Profile Card Component</h2>
+        <ProfileCard
+          name={profileData.name}
+          description={profileData.description}
+          image={profileData.image}
+          socialMedia={profileData.socialMedia}
+        />
+      </div>
+
+      {/* Counter Component dari tugas sebelumnya */}
       <Counter 
         count={count}
         onIncrement={increment}
         onDecrement={decrement}
       />
 
-      {/* Reset Button */}
       <Card className="bg-card/50 backdrop-blur-sm border-muted mt-4">
         <CardContent className="pt-6">
           <button
