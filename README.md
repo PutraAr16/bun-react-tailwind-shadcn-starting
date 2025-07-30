@@ -1,72 +1,18 @@
-# Bun - React - Tailwind - Shadcn | Starting Template
+# Bun + React + TailwindCSS + Shadcn UI
 
-To install dependencies:
+## Tugas 7 - ProfileCard Component
 
-```bash
-bun install
-```
+Proyek ini merupakan implementasi komponen ProfileCard menggunakan TailwindCSS dan Shadcn UI.
 
-To start a development server:
+### 🎯 Tujuan Pembelajaran
+- Memahami dan menerapkan utility class dari TailwindCSS
+- Menerapkan responsive design
+- Menggunakan komponen UI dari Shadcn secara modular dan terstruktur
 
-```bash
-bun dev
-```
+### 🚀 Fitur
+- **ProfileCard Component**: Komponen kartu profil yang responsive dan interaktif
+- **Social Media Integration**: Tombol untuk membuka profil media sosial
+- **Modern UI**: Menggunakan Shadcn UI components dengan styling TailwindCSS
+- **TypeScript Support**: Full type safety dengan interfaces yang terstruktur
 
-To build the project:
-
-```bash
-bun run build
-```
-
-To run for production:
-
-```bash
-bun start
-```
-
-This project was created using `bun init` in bun v1.2.19. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-
----
-
-## Project Structure
-
-```ts
-└── 📁src   // Main source directory
-    └── 📁components    // Reusable UI components
-        └── 📁shared    // Shared components
-        └── 📁ui    // Shadcn UI components 
-            ├── button.tsx  
-            ├── card.tsx
-            ├── form.tsx
-            ├── input.tsx
-            ├── label.tsx
-            ├── select.tsx
-    └── 📁hooks   // Custom hooks
-    └── 📁lib   // Library functions
-        ├── utils.ts    // Utility functions
-    └── 📁pages   // Page components
-    └── 📁public    // Public assets
-        └── 📁images    // Image assets
-            ├── logo.svg
-            ├── react.svg
-        └── 📁styles    // CSS Styles directory
-            ├── globals.css
-        ├── index.html    // Main HTML file
-    └── 📁routes    // Application routes
-    └── 📁stores    // Global state management (Zustand)
-    └── 📁types   // TypeScript type definitions
-    ├── APITester.tsx   // API testing component
-    ├── App.tsx   // Main application component
-    ├── index.ts    // Entry point for the application
-    ├── main.tsx    // Main entry file for the React application
-├── .env    // Environment variables
-├── .gitignore    // Git ignore file
-├── build.ts    // Build script
-├── bun-env.d.ts    // Type definitions for Bun environment
-├── bun.lock    // Bun lock file
-├── bunfig.toml   // Bun configuration file
-├── components.json   // Shadcn Components configuration
-├── package.json    // Project configuration
-├── README.md   // Project documentation
-└── tsconfig.json   // TypeScript configuration
-```
+![ss](<Screenshot (2468).png>)
