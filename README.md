@@ -15,5 +15,6 @@ Add Notes?: Fitur ini memungkinkan pengguna untuk menambahkan catatan tambahan j
 
 Register for Bootcamp Button: Tombol untuk menyelesaikan proses registrasi dan mengirimkan formulir. Secara keseluruhan, formulir ini dirancang untuk mengumpulkan data dasar pengguna yang akan mendaftar untuk program pelatihan bootcamp, dan memungkinkan mereka memilih jalur pembelajaran yang mereka inginkan.
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/27442327-df4c-4145-90e3-681c9a892021" />
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/97e0744f-b202-4a55-8233-1172388dd249" />
+
+<img width="1920" height="977" alt="Screenshot (2475)" src="https://github.com/user-attachments/assets/01f24a12-b6f9-4817-97b6-1e6327151fec" />
+<img width="1920" height="961" alt="Screenshot (2476)" src="https://github.com/user-attachments/assets/83bca587-381b-450a-b589-db7b9aca3b32" />
