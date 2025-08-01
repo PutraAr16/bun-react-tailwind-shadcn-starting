@@ -1,17 +1,16 @@
-// src/App.tsx
 import { Card, CardContent } from "@/components/ui/card";
 import { APITester } from "./APITester";
 import "@/public/styles/globals.css";
 import React, { useState } from "react";
 import Counter from './components/shared/counter';
-import { ProfileCard } from './components/shared';
+import { ProfileCard, RegistrationForm } from './components/shared';
 import { profileData } from './data';
 
 import logo from "@/public/images/logo.svg";
 import reactLogo from "@/public/images/react.svg";
 
 export function App() {
-  // State untuk counter (dari tugas sebelumnya)
+  // State untuk counter
   const [count, setCount] = useState<number>(0);
 
   const increment = () => setCount(count + 1);
@@ -33,7 +32,7 @@ export function App() {
         />
       </div>
 
-      <Card className="bg-card/50 backdrop-blur-sm border-muted mb-6">
+      <Card className="bg-card/50 backdrop-blur-sm border-muted mb-8">
         <CardContent className="pt-6">
           <h1 className="text-5xl font-bold my-4 leading-tight">Bun + React</h1>
           <p>
@@ -44,6 +43,11 @@ export function App() {
           <APITester />
         </CardContent>
       </Card>
+
+      {/* Registration Form */}
+      <div className="mb-8">
+        <RegistrationForm />
+      </div>
 
       {/* ProfileCard Component */}
       <div className="mb-8">
@@ -56,7 +60,7 @@ export function App() {
         />
       </div>
 
-      {/* Counter Component dari tugas sebelumnya */}
+      {/* Counter Component */}
       <Counter 
         count={count}
         onIncrement={increment}
